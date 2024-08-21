@@ -5,27 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lantern Webpage</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header class="header-primary">
       <header class="header-secondary">
-        <a href="#">
+        <div class="logo-text">
           <img
             class="logo"
             src="img/gulf_travel_logo.png"
             alt="gulf_travel_logo"
           />
-          <span class="logo-text">GULF TRAVEL</span>
-          <span class="logo-text">& TOURISM LLC</span>
-        </a>
+          <div class="text">
+            <span class="text-1">GULF TRAVEL</span>
+            <span class="text-2">& TOURISM LLC</span>
+          </div>
+        </div>
         <nav class="main-nav">
           <ul class="main-nav-list">
             <li><a class="main-nav-link" href="#">Home</a></li>
@@ -35,21 +36,60 @@
             <li><a class="main-nav-link nav-log" href="#">Login</a></li>
             <li><a class="main-nav-link nav-add" href="#">AED</a></li>
             <button class="btn-moblie-nav">
-              <ion-icon class="icon-moblie-nav" name="menu-outline"></ion-icon>
+              <i class="fa-solid fa-bars fa-xl"></i>
             </button>
           </ul>
         </nav>
       </header>
       <h1 class="heading-primary center-text">Travel Effortlessly</h1>
+      <div class="btn">
+        <div class="flights">Flights</div>
+        <div class="hotels">Hotels</div>
+        <div class="car">Car Rental</div>
+        <div class="explore">Explore</div>
+        <div class="new">New</div>
+      </div>
       <div class="container">
         <div class="from">
           <img src="./img/Arrival.jpg" class="arrival" alt="arrival" />
-          <input type="arrival-text" class="arrival-text" />
+          <div class="from-text">
+            <span class="from-text-1">From</span>
+            <span class="from-text-2">Dubai <sub>DXB</sub></span>
+            <span class="from-text-3">Dubai International Airport</span>
+          </div>          
         </div>
-        <br /><br />
+        <div class="arrow">
+          <img src="./img/arrow.jpg" alt="arr">
+        </div> 
         <div class="to">
-          <img src="./img/Landing.jpg" class="landing" alt="landing" />
-          <input type="text" />
+          <img src="./img/Landing.jpg" class="landing" alt="arrival" />
+          <div class="to-text">
+            <span class="to-text-1">To</span>
+            <span class="to-text-2">Santorini <sub>JTR</sub></span>
+            <span class="to-text-3">Santorini International Airport</span>
+          </div>          
+        </div>
+        <div class="date">
+          <img src="./img/date.jpg" class="departure" alt="departure date" />
+          <div class="date-text">
+            <span class="date-text-1">Departure</span>
+            <span class="date-text-2">12 <sub>Nov,2023</sub></span>
+            <span class="date-text-3">Monday</span>
+          </div>          
+        </div>
+        <div class="return">
+          <img src="./img/date.jpg" class="return-date" alt="return date" />
+          <div class="return-text">
+            <span class="return-text-1">+ ADD return date</span>
+            <span class="return-text-2">Save more on round trips</span>
+          </div>          
+        </div>
+        <div class="travelers">
+          <img src="./img/class.jpg" class="travelers_class" alt="return date" />
+          <div class="travelers-text">
+            <span class="travelers-text-1">+ ADD return date</span>
+            <span class="travelers-text-2">Save more on round trips</span>
+          </div>          
         </div>
       </div>
     </header>
