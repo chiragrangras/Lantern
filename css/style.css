@@ -10,8 +10,8 @@
 }
 
 @font-face {
-  font-family: TitilliumWeb;
-  src: url("../font/TitilliumWeb-Regular.ttf");
+  font-family: TitilliumWebBlack;
+  src: url("../font/TitilliumWeb-Black.ttf");
 }
 
 .header-primary {
@@ -127,9 +127,9 @@
   text-align: center;
   text-transform: uppercase;
   font-weight: 900;
-  font-family: TitilliumWeb;
+  font-family: TitilliumWebBlack;
   color: #303030;
-  padding: 310px 0px 90px 0px;
+  padding: 140px 0px 90px 0px;
 }
 
 .btn {
@@ -233,8 +233,9 @@
   flex-direction: column;
 }
 
-.from-text-1 {
-  font-family: Sofia Sans;
+.from-text-1,
+.from-text-3 {
+  font-family: SofiaSans;
   font-size: 16px;
   font-weight: 400;
   line-height: 19.2px;
@@ -242,18 +243,10 @@
 }
 
 .from-text-2 {
-  font-family: Sofia Sans;
+  font-family: SofiaSans;
   font-size: 36px;
   font-weight: 700;
   line-height: 43.2px;
-  text-align: left;
-}
-
-.from-text-3 {
-  font-family: Sofia Sans;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 19.2px;
   text-align: left;
 }
 
@@ -294,7 +287,7 @@
 }
 
 .to-text-1 {
-  font-family: Sofia Sans;
+  font-family: SofiaSans;
   font-size: 16px;
   font-weight: 400;
   line-height: 19.2px;
@@ -302,7 +295,7 @@
 }
 
 .to-text-2 {
-  font-family: Sofia Sans;
+  font-family: SofiaSans;
   font-size: 36px;
   font-weight: 700;
   line-height: 43.2px;
@@ -310,7 +303,7 @@
 }
 
 .to-text-3 {
-  font-family: Sofia Sans;
+  font-family: SofiaSans;
   font-size: 16px;
   font-weight: 400;
   line-height: 19.2px;
@@ -345,7 +338,7 @@
 }
 
 .date-text-1 {
-  font-family: Sofia Sans;
+  font-family: SofiaSans;
   font-size: 16px;
   font-weight: 400;
   line-height: 19.2px;
@@ -353,14 +346,14 @@
 }
 
 .date-text-2 {
-  font-family: Sofia Sans;
+  font-family: SofiaSans;
   font-size: 36px;
   font-weight: 700;
   line-height: 43.2px;
   text-align: left;
 }
 .date-text-3 {
-  font-family: Sofia Sans;
+  font-family: SofiaSans;
   font-size: 16px;
   font-weight: 400;
   line-height: 19.2px;
@@ -394,7 +387,7 @@
 }
 
 .return-text-1 {
-  font-family: Sofia Sans;
+  font-family: SofiaSans;
   font-size: 16px;
   font-weight: 700;
   line-height: 19.2px;
@@ -402,7 +395,7 @@
 }
 
 .return-text-2 {
-  font-family: Sofia Sans;
+  font-family: SofiaSans;
   font-size: 16px;
   font-weight: 400;
   line-height: 19.2px;
@@ -436,7 +429,7 @@
 }
 
 .travelers-text-1 {
-  font-family: Sofia Sans;
+  font-family: SofiaSans;
   font-size: 16px;
   font-weight: 700;
   line-height: 19.2px;
@@ -444,7 +437,7 @@
 }
 
 .travelers-text-2 {
-  font-family: Sofia Sans;
+  font-family: SofiaSans;
   font-size: 16px;
   font-weight: 400;
   line-height: 19.2px;
@@ -516,28 +509,67 @@
   text-align: left;
 }
 
-.destinations-img-1 {
-  padding-left: 20px;
-  width: 480px;
+.destinations-img {
+  display: flex;
+}
+
+.destinations-img-1 img {
+  margin-left: 50px;
+  width: 400px;
   height: 500px;
 }
 
-.destinations-img-2 {
+.destinations-img-2 img {
+  width: 400px;
+  height: 501px;
+}
+.destinations-img-2::before,
+.destinations-img-2::after {
+  content: "";
+  display: block;
   position: absolute;
-  left: 480px;
-  box-shadow: -15px 0px 41px 0px #1b1b1b;
-  opacity: 0.4;
-  width: 480px;
-  height: 500px;
+  top: 60%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+}
+.destinations-img-2::before {
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-.destinations-img-3 {
-  position: absolute;
-  left: 750px;
-  box-shadow: -15px 0px 41px 0px #000000;
-  opacity: 0.4;
-  width: 480px;
+.destinations-img-2::after {
+  width: 40%;
+  padding-bottom: 50%;
+  background-color: rgba(255, 255, 255,0.5);
+  z-index: 1;
+}
+
+.destinations-img-3 img {
+  width: 400px;
   height: 500px;
+  z-index: 4;
+}
+
+.destinations-img-3::before,
+.destinations-img-3::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 55%;
+  left: 76%;
+  transform: translate(-40%, -50%);
+}
+.destinations-img-3::before {
+  width: 30%;
+  background-color: rgba(255, 255, 255,0.1);
+  z-index: 5;
+}
+
+.destinations-img-3::after {
+  width: 40%;
+  padding-bottom: 50%;
+  background-color: rgba(255, 255, 255,0.5);
+  z-index: 6;
 }
 
 .offers {
@@ -587,37 +619,45 @@
   height: 41px;
   color: #ffff;
 }
-.offers-container{
+
+.offers-container {
   display: flex;
   width: 1100px;
-  height: 370px;
+  height: 620px;
   border-radius: 11px;
 }
-.offers-flight{
+
+.offer-data {
+  background-color: #ffffff;
+  width: 560px;
+  height: 271px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.offers-spain {
   position: absolute;
   top: 130px;
   left: 50px;
-  background-color: #ffffff;
-  width: 560px;
-  height: 271px;
-  border-radius: 9px;
-  display: flex;
-  align-items: center;
-  gap: 40px;
 }
-.offers-hotel{
+.offers-mumbai {
   position: absolute;
   top: 130px;
-  right:50px;
-  background-color: #ffffff;
-  width: 560px;
-  height: 271px;
-  border-radius: 9px;
-  display: flex;
-  align-items: center;
-  gap: 40px;
+  right: 75px;
 }
-.offer-img-1{
+.offers-dubai {
+  position: absolute;
+  top: 420px;
+  left: 50px;
+}
+.offers-newyork {
+  position: absolute;
+  top: 420px;
+  right: 75px;
+}
+
+.offer-img-1 {
   margin-left: 20px;
   width: 198px;
   height: 198px;
@@ -625,6 +665,300 @@
 }
 .apply {
   position: absolute;
-  bottom: 8px;
+  bottom: 12px;
   left: 40px;
+  font-family: SofiaSans;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 16px;
+  text-align: left;
+}
+.book {
+  background-image: linear-gradient(to right, #ff512f, #f09819);
+  color: #fff;
+  width: 110px;
+  height: 28px;
+  border-radius: 26px;
+  border: none;
+  cursor: pointer;
+}
+.spain-book,
+.mumbai-book {
+  position: absolute;
+  top: 220px;
+  left: 415px;
+  z-index: 4;
+}
+
+.dubai-book,
+.newyork-book {
+  position: absolute;
+  top: 220px;
+  left: 415px;
+  z-index: 4;
+}
+
+.offer-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.offer-text-1 {
+  margin: -54px 0px 20px 0px;
+  font-family: SofiaSans;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+}
+
+.offer-text-2 {
+  margin-bottom: 50px;
+  font-family: SofiaSans;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 20px;
+  text-align: left;
+}
+.offer-text-3 {
+  font-family: SofiaSans;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 14px;
+  text-align: left;
+}
+
+.view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f09819;
+  text-decoration-color: #f09819;
+  text-decoration-line: underline;
+}
+
+.sights {
+  background-color: #000000;
+  position: relative;
+}
+.sights_heading {
+  padding: 10px 0px 20px 60px;
+  color: #fff;
+  font-family: SofiaSans;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 57.6px;
+  text-align: left;
+}
+.sights_more {
+  position: absolute;
+  top: 30px;
+  right: 80px;
+  text-decoration: underline;
+  color: #fc7f0c;
+  font-family: SofiaSans;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28.8px;
+  text-align: left;
+}
+.sights-img {
+  display: flex;
+  gap: 20px;
+}
+.sights-img-1 img {
+  margin: 30px 0px 0px -30px;
+  width: 400px;
+  height: 377px;
+}
+.sights-img-2 img {
+  margin-top: 30px;
+  width: 400px;
+  height: 377px;
+}
+.sights-img-3 img {
+  margin-top: 30px;
+  width: 350px;
+  height: 377px;
+}
+h5 {
+  font-family: SofiaSans;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: left;
+}
+p {
+  font-family: SofiaSans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+}
+
+.location-map {
+  height: 475px;
+  background-color: #000000;
+  color: #fff;
+}
+
+.location {
+  position: relative;
+  padding: 40px 0px 20px 170px;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+.line{
+  position: absolute;
+  bottom: 25px;
+  left: 450px;
+  width: 515px;
+}
+.arrow {
+  position: absolute;
+  top: 40px;
+  right: 320px;
+  color: #f09819;
+}
+
+.map {
+  margin-left: 45px;
+  width: 1100px;
+  height: 350px;
+}
+
+.aboutus {
+  background-color: #000000;
+  height: 320px;
+  position: relative;
+}
+
+.aboutus-img {
+  margin-left: 30px;
+  width: 202px;
+  height: 196px;
+  opacity: 0.1;
+}
+
+.about-text{
+  position: absolute;
+  top: 53px;
+  left: 250px;
+  font-family: SofiaSans;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 48px;
+  text-align: left;
+}
+
+.link{
+  position: absolute;
+  top: 65px;
+  right: 100px;
+  font-family: SofiaSans;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28.8px;
+  text-align: right;
+}
+
+.customer-1{
+  position: absolute;
+  top: 130px;
+  left: 160px;
+  width: 440px;
+  height: 150px;
+  border-radius: 9px;
+  background-color: #FB4F0B;
+  color: #fff;
+}
+.heading-star{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h6 {
+  margin: 10px 0px 0px 30px;
+  font-family: SofiaSans;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: left;  
+}
+
+.star {
+  margin: 10px 30px 0px 0px;
+  width: 167.16px;
+  height: 38.66px;
+}
+
+.aboutus_p{
+  margin: 10px 0px 0px 30px;
+  font-family: SofiaSans;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 400;
+  text-align: left;
+}
+.customer-2{
+  position: absolute;
+  top: 130px;
+  right:200px;
+  width: 450px;
+  height: 150px;
+  border-radius: 9px;
+  background-color: #FB4F0B;
+  color: #fff;
+}
+
+.news-updates{
+  background-color: #000000;
+  height: 100px;
+  position: relative;
+}
+.news-text{
+  position: absolute;
+  top: 15px;
+  left: 100px;
+  font-family: SofiaSans;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 48px;
+  text-align: left;
+}
+.news-link {
+  position: absolute;
+  top: 25px;
+  right: 210px;
+  font-family: SofiaSans;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28.8px;
+  text-align: right;
+}
+.news-img {
+  display: flex;
+}
+.news-img-1{
+  width: 100px;
+  height: 100px;
+}
+.news-img-2{
+  width: 100px;
+  height: 100px;
+}
+.news-img-3{
+  width: 100px;
+  height: 100px;
+}
+.news-img-4{
+  width: 100px;
+  height: 100px;
 }
